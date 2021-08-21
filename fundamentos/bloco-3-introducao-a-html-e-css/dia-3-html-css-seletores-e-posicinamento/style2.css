@@ -1,0 +1,29 @@
+h1, p {
+background-color: rgb(230, 209, 179);
+text-align: center;
+}
+
+body {
+background-color: rgb(126, 93, 62);
+}
+
+ol{
+background-color: rgb(230, 209, 179);
+color: rgb(126, 93, 62);
+list-style: disc;
+}
+
+ul {
+    background-color: rgb(230, 209, 179);
+    color: rgb(126, 93, 62);
+    list-style: none;
+}
+
+li:hover {
+ background-color: rgb(9, 134, 63);
+ transition: all;
+}
+
+li:active {
+    color: snow;
+}
