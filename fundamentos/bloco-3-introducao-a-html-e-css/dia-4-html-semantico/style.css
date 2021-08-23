@@ -26,7 +26,9 @@ h1 {
     text-align: center;
     width: 300px;
   }
-
+  ul {
+      list-style-type: none;
+  }
   .podium {
       list-style-type: none;
       display: inline-block;
@@ -42,4 +44,9 @@ h1 {
 
   .third {
       display: inline-block;
+  }
+
+  .conteudo {
+    text-align: center;
+    margin-right: 589px;
   }
