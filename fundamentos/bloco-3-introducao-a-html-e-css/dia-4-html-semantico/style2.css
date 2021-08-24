@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+ font-family: Geneva;
+}
+
+header {
+    color:red;
+    border: 5px solid red;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+nav{
+    border: 5px solid green;
+    padding: 30px 15px;
+    margin: 30px;
+}
+
+article {
+    border: 5px solid palevioletred;
+    margin: 30px;
+}
+
+.section {
+    border: 5px solid blueviolet;
+    margin: 30px;
+}
+
+.subsection1 {
+    border: 5px solid blue;
+    margin: 30px;
+}
+
+.subsection2 {
+    border: 5px solid yellow;
+    margin: 30px;
+}
+
+.referencias{
+    border: 5px solid black;
+    margin: 30px;
+}
+
+footer{
+    border: 5px solid peru
+}
