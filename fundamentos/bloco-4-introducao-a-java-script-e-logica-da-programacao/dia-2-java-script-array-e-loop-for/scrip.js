@@ -18,3 +18,15 @@ if (mediAritimetica > 20){
 } else {
    console.log("valor menor ou igual a 20") 
 }
+
+let maior = numbers[0]
+
+for (let i=1; i< numbers.length; i++){
+    if ( numbers[i] > maior){
+        maior =numbers[i]
+    }
+}
+
+
+console.log (maior)
+
