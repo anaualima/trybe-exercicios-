@@ -8,5 +8,5 @@ for (let i= 0; i < fruits.length; i+=1){
 if(soma > 15){
     console.log(soma)
 } else{
-    console.log("valor menor ou igual a 15")
+    console.log("valor menor que 16")
 }
