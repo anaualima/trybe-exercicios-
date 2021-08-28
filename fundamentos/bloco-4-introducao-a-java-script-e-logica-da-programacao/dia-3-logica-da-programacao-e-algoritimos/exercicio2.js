@@ -5,7 +5,7 @@ let triangulo = "" ;
 let asterisco = "*";
 
 for (let i=0; i < n; i+=1){
-    triangulo = triangulo + asterisco
+    triangulo += asterisco
     console.log (triangulo)
 }
 

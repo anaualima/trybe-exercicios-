@@ -18,6 +18,8 @@ console.log (soma);
 
 let mediAritimetica = (soma/numbers.length);
 
+console.log(mediAritimetica)
+
 //questao 4
 
 if (mediAritimetica > 20){
@@ -80,5 +82,15 @@ console.log (questao8)
 for (let i =0; i < questao8.length; i++){
     console.log(questao8[i]/2)
 }
+
+//for of
+
+let names = ['João', 'Maria', 'Antônio', 'Margarida'];
+
+for (let name of names){
+    console.log(name)
+}
+
+//Bonus 
 
 
