@@ -1,3 +1,4 @@
+//exercicio 1
 const a = 2;
 const b = 3;
 
@@ -7,6 +8,7 @@ let multiplicacao = a*b;
 let divisao = a/b;
 let modulo = a%b;
 
+// exercicio 2
 const c = 30;
 const d = 40;
 
@@ -15,6 +17,8 @@ if (c > d){
 } else {
     console.log (d)
 }
+
+//exercicio 3
 
 const e = 3;
 const f = 4;
