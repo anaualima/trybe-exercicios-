@@ -1,6 +1,6 @@
 //exercicio 7 nota dada em porcentagem que retorne os conceitos de A a F.
 
-let nota = 40;
+let nota = 0;
 
 if (nota >=90){
     console.log("A")
@@ -12,6 +12,10 @@ if (nota >=90){
     console.log("D")
 } else if (nota >=50){
     console.log("E")
-} else {
+} else if (nota < 50){
     console.log("F")
-} 
+} else {
+    console.log ("erro")
+}
+
+//exercicio 8 
