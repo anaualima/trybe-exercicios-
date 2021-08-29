@@ -1,27 +1,22 @@
 //criar a figura de uma triangulo a direita com asteríscos dado um vamos n, onde n é sempre maior que 1
 
+let triangulo = ""
 let n = 5;
-let linha = "" ;
-let trianguloB = "" ;
-let triangulo = "";
 let asterisco = "*";
-let espaco = "a";
+let espaco = " ";
+let base = n;
 
-for (let i= 0; i < (n-1); i+=1){
-  linha +=espaco;
-  if(linha > (n-1)){
-    console.log(asterisco);
-  } else {
-    continue;
+for (let linhai=0; linhai < n; linhai+=1){
+  for (let colunai = 0; colunai <= n; colunai+=1){
+    if (colunai < base){
+      triangulo +=espaco;
+    } else{
+      triangulo +=asterisco;
+    }
   }
+    console.log (triangulo);
+    triangulo = "";
+    base = base - 1
+
   
 }
-
-// console.log(linha)
-
-// for (let i= 1; i < n; i-=1){
-//   triangulo 
-// }
-
-// trianguloA += espaco
-// trianguloB += asterisco
