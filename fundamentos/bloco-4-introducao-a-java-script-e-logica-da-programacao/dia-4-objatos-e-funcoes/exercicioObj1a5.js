@@ -47,5 +47,3 @@ if (key === "recorrente" && tio.recorrente === 'sim' && info.recorrente === 'sim
 }
 }
 
-
-
