@@ -16,7 +16,5 @@ for (let linhai=0; linhai < n; linhai+=1){
   }
     console.log (triangulo);
     triangulo = "";
-    base = base - 1
-
-  
+    base = base - 1  
 }
