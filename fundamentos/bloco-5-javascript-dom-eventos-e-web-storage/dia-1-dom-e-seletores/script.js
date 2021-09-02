@@ -3,4 +3,4 @@ document.getElementById("paragraph").innerText = "Um filme Bollywoodiano que tra
 document.getElementById("subtitle").innerText = "Vale a pena assistir!";
 document.getElementById("second-paragraph").innerText = "Taare Zameen Par (em hindi: तारे ज़मीन पर; em inglês: Like Stars on Earth) é um filme indiano de 2007, dos gêneros infantil e comédia dramática, dirigido por Aamir Khan, que também atua, no papel do professor Nikumbh.O filme estreou nos cinemas em 21 de dezembro de 2007 e foi lançado em DVD em 2008 na Índia como Taare Zameen Par e em 2010.";
 document.getElementsByClassName("descricao-filme")[0].innerText = "como alterar estilo?"
-document.getElementsByTagName("h4")[0].innerText = "como alterar cor ?"
+document.getElementsByTagName("h4")[0].innerText = "como alterar cor ?";
