@@ -44,3 +44,9 @@ function tornarMaiusculo (){
 }
 
 tornarMaiusculo();
+
+//Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+
+function exibirParagrafos() {
+    let todosOsParagrafos = document.get
+}
