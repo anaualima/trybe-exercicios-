@@ -37,3 +37,10 @@ function corrigeTitulo() {
 corrigeTitulo();
 
 //Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+
+function tornarMaiusculo (){
+    let maiusculo = document.getElementsByTagName("p")[2];
+    maiusculo.innerHTML = maiusculo.innerHTML.toUpperCase();
+}
+
+tornarMaiusculo();
