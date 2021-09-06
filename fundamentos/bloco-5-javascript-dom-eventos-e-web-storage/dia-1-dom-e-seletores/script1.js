@@ -5,7 +5,7 @@ document.getElementsByClassName("main-content")
 
 function paragrafo() {
    let mudaParagrafo = document.getElementsByTagName("p")[1];
-   mudaParagrafo.innerText = "Daqui a dois anos pretendo estar trabalhando com programação e ter sido promovida já no meu primeiro emprego após o curso da trybe, sendo uma excelente profissional, e com isso conseguir morar sozinha, para depois conseguir morar com meu companheiro.";
+   mudaParagrafo.innerText = "Conseguir ser uma execlente profissional, realizar grandes desafios e me satisfazer ao perceber que consigo melhorar a vida das pessoas através da programação.";
 }
 
 paragrafo();
@@ -38,9 +38,9 @@ corrigeTitulo();
 
 //Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 
-function tornarMaiusculo (){
-    let maiusculo = document.getElementsByTagName("p")[2];
-    maiusculo.innerHTML = maiusculo.innerHTML.toUpperCase();
+function tornarMaiusculo() {
+    let maiusculo = document.getElementsByTagName('p')[0];
+    maiusculo.innerHTML = maiusculo.innerHTML.toUpperCase();  
 }
 
 tornarMaiusculo();
@@ -48,5 +48,10 @@ tornarMaiusculo();
 //Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 
 function exibirParagrafos() {
-    let todosOsParagrafos = document.get
+    let todosOsParagrafos = document.getElementsByTagName('p');
+    for (let i =0; i < todosOsParagrafos.length; i+=1){
+        console.log(todosOsParagrafos[i].innerText);
+    }
 }
+
+exibirParagrafos();
