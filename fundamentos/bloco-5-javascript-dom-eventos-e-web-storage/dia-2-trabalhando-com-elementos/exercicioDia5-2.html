@@ -88,7 +88,7 @@
      //6 Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
 
      let direitaTagSection = document.createElement('section');
-     esquerdaTagSection.className = "right-content";
+     direitaTagSection.className = "right-content";
      novaTagMain.appendChild(direitaTagSection);
 
      //7 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
@@ -96,16 +96,17 @@
      let imagem = document.createElement('img');
      imagem.className = "small-image";
      imagem.src = "https://picsum.photos/200";
-     esquerdaTagSection.main.appendChild(imagem);
+     esquerdaTagSection.appendChild(imagem);
 
      //8 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
 
      let listaNaoOrdenada = document.createElement('ul');
      direitaTagSection.appendChild(listaNaoOrdenada)
-     let numerosPorExtenso = [um, dois, três, quatro, cinco, seis, sete, oito, nove, dez];
+     let numerosPorExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
      for (let i=0; i < numerosPorExtenso.length; i+=1){
        let listaDeNumeros = document.createElement('li');
-       listaDeNumeros = numerosPorExtenso[i];
+       let lista = numerosPorExtenso[i]
+       listaDeNumeros.innerText = lista
        listaNaoOrdenada.appendChild(listaDeNumeros);
      }
 
@@ -118,18 +119,24 @@
      //agora é hora de modificar!
      //1 Adicione a classe title na tag h1 criada;
 
-     let tituloPrincipal= document.querySelector('h1');
-     tituloPrincipal.className('title');
+     let tituloModificado = document.querySelector('h1');
+     tituloModificado.className = 'title';
 
      //2 Adicione a classe description nas 3 tags h3 criadas;
-     let tagsTitulosMenores = document.getElementsByTagName('h3');
-     for (let i =0; i <=3; i+=1){
-       tagsTitulosMenores[i].className('description');
+
+     let subTitulosModificados = document.getElementsByTagName('h3');
+     for (let i=0; i < subTitulosModificados.length; i+=1){
+       subTitulosModificados[i].className = 'description';
      }
 
      //3 Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+
+     //4 Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+
+     //5 Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
      
-     novaTagMain.removeChild(esquerdaTagSection);
+     //6 Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
 
     </script>
   </body>
