@@ -14,4 +14,7 @@ paragrafoUm.className = 'estiloParagrafos';
 paragrafoUm.className = 'estiloParagrafos';
 
 let estilizarParagrafos = document.getElementsByClassName('estiloParagrafos')[0];
-estilizarParagrafos.style.background = 'pink'
+estilizarParagrafos.style.background = 'pink';
+
+let subTituloColorido = document.getElementsByTagName('h4')[0];
+subTituloColorido.style.color = 'pink';
