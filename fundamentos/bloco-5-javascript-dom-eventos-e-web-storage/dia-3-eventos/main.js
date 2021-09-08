@@ -30,17 +30,21 @@ function mudaTexto(event){
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portifólio?
 let meuTopSpotrybe = document.querySelector('h3');
-meuTopSpotrybe.addEventListener("dblclick", duploCick)
+meuTopSpotrybe.addEventListener("dblclick", duploCick);
 
 function duploCick(event){
     //let meuTopSpotrybe = document.querySelector('h3');
-    window.location.replace('https://anaualima.github.io/')
+    window.location.replace('https://anaualima.github.io/');
 }
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
-
 // Segue abaixo um exemplo do uso de event.target:
+meuTopSpotrybe.addEventListener("mouseover", passarMouse);
+
+function passarMouse(event){
+    meuTopSpotrybe.style.background = "red";
+}
 
 
 function resetText(event) {
