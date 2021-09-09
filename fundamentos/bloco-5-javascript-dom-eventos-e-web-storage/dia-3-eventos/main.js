@@ -46,7 +46,6 @@ function passarMouse(event){
     meuTopSpotrybe.style.background = "red";
 }
 
-
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
