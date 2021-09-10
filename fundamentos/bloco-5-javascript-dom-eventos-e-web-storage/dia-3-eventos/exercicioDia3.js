@@ -61,9 +61,17 @@ function createDaysOfTheWeek() {
 
   let botaoFeriado = document.getElementById('btn-holiday');
   let feriados = document.querySelectorAll('.holiday');
+  let verde ="green";
+  let padrao ="rgb(238,238,238)";
 
   botaoFeriado.addEventListener("click", mudaCorFeriados);
 
-  function mudaCorFeriados(event){
-      feriados.style.backgorung = "green"
-  }
+  function mudaCorFeriados (event){
+      for (let i=0;i< feriados.length;i+=1){
+          if(feriados[i].style.background = padrao){
+          feriados[i].style.background = verde;
+          }else{
+            feriados[i].style.background = padrao;
+        }
+      }
+    }
