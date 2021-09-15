@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Formulário Currículo</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+   <h1>Olá, preencha os dados do seu currículo</h1>
+   <form action="" method="GET" enctype="multipart/form-data">
+    <fieldset>
+    <label for="nome-completo">Digite seu nome:</label>
+    <input type="text" required id="nome-completo">
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" required id="email">
+    <br>
+    <label for="cpf">CPF:</label>
+    <input type="text" required id="cpf">
+    <br>
+    <label for="endereco">Endereço:</label>
+    <input type="text" required id="endereco">
+    <br>
+    <label for="cidade">Cidade:</label>
+    <input type="text" required id="cidade">
+    <br>
+    <label for="estado">Estado:</label>
+    <select name="estado" id="dropdown-estado">
+        <option value="ac">Acre</option>
+        <option value="al">Alagoas</option>
+        <option value="ap">Amapá</option>
+        <option value="am">Amazonas</option>
+        <option value="ba">Bahia</option>
+        <option value="ce">Ceará</option>
+        <option value="df">Distrito Federal</option>
+        <option value="es">Espírito Santo</option>
+        <option value="go">Goiás</option>
+        <option value="ma">Maranhão</option>
+        <option value="mt">Mato Grosso</option>
+        <option value="ms">Mato Grosso do Sul</option>
+    </select>
+    <br>
+    <label for="casa">
+        <input type="radio" id="casa" name="local" value="casa">Casa
+    </label>
+    <label for="apartamento">
+        <input type="radio" id="apartamento" name="local" value="apartamento">Apartamento
+    </label>
+    </fieldset>
+    <br>
+    <fieldset>
+        <h3>Dados do seu ultimo emprego</h3>
+        <p>Resumo do seu currículo:</p>
+        <textarea name="resumo-do-curriculo" id="textarea-curriculo"  required cols="30" rows="15"></textarea>
+        <br>
+        <label for="cargo">Cargo:</label>
+        <input type="text" required id="cargo">
+        <br>
+        <label for="descricao">Descrição do cargo:</label>
+        <input type="text" required id="descricao">
+        <br>
+        <label for="date">Data de início:</label>
+        <input type="date" id="date" required>
+        <br>
+        <div id="container-button">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </fieldset>
+    </form>
+   </form>
+  </body>
+  <script src="script.js"></script>
+</html>
