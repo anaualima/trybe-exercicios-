@@ -2,28 +2,31 @@
 <html lang="pt-br">
   <head>
     <title>Formulário Currículo</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
   </head>
   <body>
    <h1>Olá, preencha os dados do seu currículo</h1>
    <form action="" method="GET" enctype="multipart/form-data">
     <fieldset>
-    <label for="nome-completo">Digite seu nome:</label>
+    <label for="nome-completo" class="form-control">Digite seu nome:</label>
     <input type="text" required id="nome-completo">
     <br>
-    <label for="email">Email:</label>
+    <label for="email" class="form-control">Email:</label>
     <input type="email" required id="email">
     <br>
-    <label for="cpf">CPF:</label>
+    <label for="cpf" class="form-control">CPF:</label>
     <input type="text" required id="cpf">
     <br>
-    <label for="endereco">Endereço:</label>
+    <label for="endereco" class="form-control">Endereço:</label>
     <input type="text" required id="endereco">
     <br>
-    <label for="cidade">Cidade:</label>
+    <label for="cidade" class="form-control">Cidade:</label>
     <input type="text" required id="cidade">
     <br>
-    <label for="estado">Estado:</label>
+    <label for="estado" class="form-control">Estado:</label>
     <select name="estado" id="dropdown-estado">
         <option value="ac">Acre</option>
         <option value="al">Alagoas</option>
@@ -39,10 +42,10 @@
         <option value="ms">Mato Grosso do Sul</option>
     </select>
     <br>
-    <label for="casa">
+    <label for="casa" class="form-control">
         <input type="radio" id="casa" name="local" value="casa">Casa
     </label>
-    <label for="apartamento">
+    <label for="apartamento" class="form-control">
         <input type="radio" id="apartamento" name="local" value="apartamento">Apartamento
     </label>
     </fieldset>
@@ -52,22 +55,24 @@
         <p>Resumo do seu currículo:</p>
         <textarea name="resumo-do-curriculo" id="textarea-curriculo"  required cols="30" rows="15"></textarea>
         <br>
-        <label for="cargo">Cargo:</label>
+        <label for="cargo" class="form-control">Cargo:</label>
         <input type="text" required id="cargo">
         <br>
-        <label for="descricao">Descrição do cargo:</label>
+        <label for="descricao" class="form-control">Descrição do cargo:</label>
         <input type="text" required id="descricao">
         <br>
-        <label for="date">Data de início:</label>
+        <label for="date" class="form-control">Data de início:</label>
         <input type="date" id="date" required>
         <br>
         <div id="container-button">
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="reset" class="btn btn-secondary">Limpar</button>
         </div>
     </fieldset>
     </form>
    </form>
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
   <script src="script.js"></script>
 </html>
