@@ -1,8 +1,8 @@
 body {
-
+ margin: 10px;
 }
 h1 {
-
+ font-size: 30px;
 }
 h2 {
 
@@ -13,11 +13,21 @@ img {
 }
 
 figure {
-    margin: 0;
+    margin: 8px;
+    padding: 8px;
+}
+
+p{
+ font-size: 14px;
+ line-height: 20px;
 }
 
 @media screen and (max-width: 400px){
     p{
-        font-size: large;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    figure{
+        padding: 19px;
     }
 }
