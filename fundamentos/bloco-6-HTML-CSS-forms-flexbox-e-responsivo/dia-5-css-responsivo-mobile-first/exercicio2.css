@@ -1,0 +1,24 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+@media screen and (max-width: 800px){
+    body{
+        background-color: pink;
+    }
+}
+
+@media screen and (max-width: 400px){
+    body{
+        background-color: greenyellow;
+    }
+}
+
+@media screen and (min-width:800px){
+    body{
+        background-color: hotpink;
+    }
+}

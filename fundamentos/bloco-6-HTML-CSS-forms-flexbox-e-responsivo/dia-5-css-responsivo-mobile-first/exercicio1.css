@@ -5,7 +5,7 @@ h1 {
  font-size: 30px;
 }
 h2 {
-
+ font-size: 20px;
 }
 
 img {
@@ -15,6 +15,7 @@ img {
 figure {
     margin: 8px;
     padding: 8px;
+    width:200px
 }
 
 p{
@@ -22,12 +23,27 @@ p{
  line-height: 20px;
 }
 
-@media screen and (max-width: 400px){
-    p{
-        font-size: 20px;
-        line-height: 40px;
+@media screen and (max-width: 800px){
+    body{
+        background-color: indigo;
+        font-size: 22px;
+        margin: 20px;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:  100%;
     }
     figure{
-        padding: 19px;
+        display: flex;
+        flex-basis: 45%;
+    }
+    h2{
+        display: flex;
+        flex-basis: 100%;
+    }
+    figcaption{
+        font-size: 10px;
     }
 }
