@@ -39,13 +39,15 @@ function chaveArray(objeto,num) {
 //console.log(chaveArray(lesson1, 0));
 
 function verify (objeto,chave,valor) {
-    let par = Object.entries(objeto);
-    for (let i in par){
-    if (par[i[0]] == chave && par[i[1]] == valor){
-        return true
-    } else{
-        return false
-    }
- }
+//     let par = Object.entries(objeto);
+//     for (let lessons in par){
+//       if (par[lessons][0] == chave && par[lessons][1] == valor){
+//         return true
+//     }
+//  }
+//     return false
+return objeto[chave] === valor
+//(objeto[chave] === valor)
 }
 console.log(verify(lesson3, 'turno', 'noite'));
+
