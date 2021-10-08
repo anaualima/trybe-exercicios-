@@ -1,0 +1,38 @@
+.verdana {
+    font-family: Verdana;
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+.impact {
+    font-family:Impact;
+}
+
+.preto {
+    background-color: black;
+    color: white;
+}
+
+.cinza {
+    background-color: gray;
+    color: black;
+}
+
+.rosa {
+    background-color: pink;
+    color: hotpink;
+}
+
+.linha1 {
+    line-height: 20px;
+}
+
+.linha2 {
+    line-height: 50px;
+}
+
+.linha3 {
+    line-height: 100px;
+}
