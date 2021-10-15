@@ -76,4 +76,6 @@ const books = [
     return nomes.trim().replace(/.$/, '.');
   }
 
+
+
   console.log(flatten(books));
