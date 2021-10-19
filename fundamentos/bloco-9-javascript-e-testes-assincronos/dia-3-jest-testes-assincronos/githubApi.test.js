@@ -13,9 +13,8 @@ const getRepos = (url) => (
 
 describe('quando chamada, retorna a funcao getRepos', () => {
   test('retorna todos os repositorios em um unico array', async () => {
-    expect.assertions(1);
 
-    const repos = await getRepos(url);
+    const repos = await getRepos('https://api.github.com/orgs/tryber/repos');
     const result = [
       'sd-01-week3-html-css-project',
       'sd-01-week4-5-project-meme-generator',
