@@ -55,3 +55,9 @@ li{
   display:inline-block;
   width: 200px;
 }
+
+.basic{
+  display: flex;
+  margin: 10 px;
+  padding: 20px;
+}

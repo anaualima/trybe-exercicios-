@@ -4,10 +4,19 @@ import Pokemon from './Pokemon';
 
 function App() {
   return (<>
-  <h1>Pokedex!</h1>
+  <section className='basic'>
+  <input type='text' className='search'></input>
+  <button type='submit' className='botaos'>Search</button>
+  </section>
+  <section>
+  <h1>Pokedex</h1>
   <ul>
-  <Pokemon data={pokemons}/>
+    {pokemons.map((p) => {
+     return <Pokemon data={p}/>
+      
+    })}
   </ul>
+  </section>
   </>)
 }
 
