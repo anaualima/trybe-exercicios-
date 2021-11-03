@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Formulário Currículo</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+  <body>
+   <h1 class="h1">Olá, preencha os dados do seu currículo</h1
+    <br>
+    <label class="form-label" for="cpf">CPF:</label>
+    <input class="form-control" data-validate-field="cpf" type="text" required id="cpf">
+    <br>
+    <label class="form-label" for="endereco">Endereço:</label>
+    <input class="form-control" data-validate-field="address" type="text" required id="endereco">
+    <br>
+    <label class="form-label" for="cidade">Cidade:</label>
+    <input class="form-control" data-validate-field="city" type="text" required id="cidade">
+    <br>
+    <label class="form-label" for="estado">Estado:</label>
+    <select class="form-select" data-validate-field="state" name="estado" id="dropdown-estado">
+    </select>
+    <br>
+    <label class="form-check-label" for="casa">
+        <input class="form-check-input" type="radio" id="casa" name="local" value="casa">Casa
+    </label>
+    <label class="form-check-label" for="apartamento">
+        <input class="form-check-input" type="radio" id="apartamento" name="local" value="apartamento">Apartamento
+    </label>
+    </fieldset>
+    <br>
+    <fieldset>
+        <h3 class="h3">Dados do seu ultimo emprego</h3>
+        <p>Resumo do seu currículo:</p>
+        <textarea class="form-control" name="resumo-do-curriculo" id="textarea-curriculo"  required cols="30" rows="15"></textarea>
+        <br>
+        <label class="form-label" for="cargo">Cargo:</label>
+        <input type="text" required id="cargo">
+        <br>
+        <label class="form-label" for="descricao">Descrição do cargo:</label>
+        <input type="text" required id="descricao">
+        <br>
+        <label class="form-label" for="date">Data de início:</label>
+
+        <br>
+        <div id="container-button">
+            <button id="enviar" class="btn btn-primary">Enviar</button>
+            <button type="reset" class="btn btn-secondary">Limpar</button>
+        </div>
+    </fieldset>
+    </form>
+   </form>
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+</html>

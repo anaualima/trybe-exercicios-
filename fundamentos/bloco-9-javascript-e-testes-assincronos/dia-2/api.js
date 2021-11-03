@@ -2,13 +2,6 @@
 const API_URL = 'https://api.coincap.io/v2/assets';
 console.log(API_URL);
 
-function getCoins() {
-  return fetch(API_URL)
-    .then(response => response.json())
-    .then(data => data)
-    .catch(error => console.log(error));
-}
-
 async function nome() {
   const {data} = await getCoins();
   const coins = document.getElementById('criptomoedas')

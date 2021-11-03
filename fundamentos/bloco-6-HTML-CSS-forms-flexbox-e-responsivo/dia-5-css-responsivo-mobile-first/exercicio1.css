@@ -1,0 +1,51 @@
+body {
+ margin: 10px;
+}
+h1 {
+ font-size: 30px;
+}
+h2 {
+ font-size: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 8px;
+    padding: 8px;
+    width:200px
+}
+
+p{
+ font-size: 14px;
+ line-height: 20px;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        background-color: indigo;
+        font-size: 22px;
+        margin: 20px;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    figure{
+        display: flex;
+        flex-basis: 40%;
+        flex-direction: column;
+        margin:  2px;
+    }
+    h2{
+        display: flex;
+        flex-basis: 100%;
+    }
+    figcaption{
+        font-size: 10px;
+    }
+}
+/* sim */
