@@ -4,7 +4,7 @@ export default class Profile extends Component {
     render() {
         return (
             <div>
-                <p>Profile: vai dar certo!</p>
+                <p>Profile: {this.props.name}</p>
             </div>
         )
     }

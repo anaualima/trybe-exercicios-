@@ -12,7 +12,7 @@ export default class App extends Component {
       <BrowserRouter>
         <Route path="/about" component={About} />
         <Route path="/howto" component={HowTo} />
-        <Route path="/profile" component={Profile} />
+        <Route path="/profile/:ship" render={(props) => <Profile {...props} name="gatinha s2"/>} />
         <Route exact path="/" component={Home} />
       </BrowserRouter>
     )
