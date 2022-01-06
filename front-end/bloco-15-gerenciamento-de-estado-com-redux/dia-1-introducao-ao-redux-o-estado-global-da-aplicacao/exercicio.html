@@ -33,12 +33,23 @@
     <p>Color: <span id="value">white</span></p>
     <button id="previous">Previous color</button>
     <button id="next">Next color</button>
+    <button id="ramdon">Ramdon</button>
   </div>
   <script>
     const ESTADO_INICIAL = {
         colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
         index: 0,
       };
+
+      function criarCor() {
+    const oneChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+    let cor = '#';
+    const aleatorio = () => Math.floor(Math.random() * oneChar.length);
+    for (let i = 0; i < 6; i += 1) {
+        cor += oneChar[aleatorio()];
+    }
+    return cor;
+    }
 
       const meuReducer = (state =ESTADO_INICIAL, action) => {
         switch (action.type) {
@@ -51,7 +62,13 @@
             return {
               ...state,
               index: state.index === 0? state.colors.length -1 : state.index-1 
-            }
+            };
+          case 'RAMDON' :
+            return {
+              ...state,
+              colors: [...state.colors, criarCor()],
+              index: state.colors.length,
+            };
           default:
             return state;
         }
@@ -64,7 +81,10 @@
       });
       document.getElementById('previous').addEventListener('click', () => {
         store.dispatch({type: 'PREVIOUS_COLOR'});
-      })
+      });
+      document.getElementById('ramdon').addEventListener('click', () => {
+        store.dispatch({type: 'RAMDON'});
+      });
 
       store.subscribe(() => {
         const {colors, index} = store.getState();
