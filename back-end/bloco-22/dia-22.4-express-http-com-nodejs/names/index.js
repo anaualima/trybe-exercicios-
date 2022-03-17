@@ -7,14 +7,22 @@ const PORT = 3000;
 const FILENAME = 'name.txt';
 
 app.get('/hello', (req, res, next) => {
-  res.status(200).send({ message: 'hello world' });
+  return res.status(200).send({ message: 'hello world' });
 });
 
-app.get('/names', rescue(async (req, res, next) => {
+app.get('/names', async (req, res, next) => {
+  try{
     const data = await fs.readFile(FILENAME);
     const names = data.toString().split('\n');
 
-    res.status(200).send({ names: names })
-}));
+    return res.status(200).send({ names: names })
+  } catch(e) {
+    next(e)
+  }
+});
+
+app.use((err, req, res, next) => {
+   return res.status(500).send({ message: 'erro na logica do servidor'})
+});
 
 app.listen(PORT, () => console.log(`Aplicação rodando na porta ${PORT}`));
