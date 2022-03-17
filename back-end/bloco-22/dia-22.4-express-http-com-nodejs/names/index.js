@@ -1,28 +1,20 @@
 const express = require('express');
 const fs = require('fs/promises');
 const rescue = require('express-rescue');
+const hello = require('./Controller/hello');
+const getNames = require('./Controller/getNames');
+const error = require('./Middleware/error');
+const auth = require('./Middleware/auth');
+
+const PORT = 3000;
+const FILENAME = 'names.txt';
 
 const app = express();
-const PORT = 3000;
-const FILENAME = 'name.txt';
 
-app.get('/hello', (req, res, next) => {
-  return res.status(200).send({ message: 'hello world' });
-});
+app.get('/secure/hello', auth, hello)
+app.get('/hello', hello);
+app.get('/names', getNames);
 
-app.get('/names', async (req, res, next) => {
-  try{
-    const data = await fs.readFile(FILENAME);
-    const names = data.toString().split('\n');
-
-    return res.status(200).send({ names: names })
-  } catch(e) {
-    next(e)
-  }
-});
-
-app.use((err, req, res, next) => {
-   return res.status(500).send({ message: 'erro na logica do servidor'})
-});
+app.use(error);
 
 app.listen(PORT, () => console.log(`Aplicação rodando na porta ${PORT}`));
