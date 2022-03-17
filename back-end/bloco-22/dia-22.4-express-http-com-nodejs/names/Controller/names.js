@@ -1,4 +1,5 @@
 const fs = require('fs/promises');
+const express = require('express');
 const FILENAME = 'names.txt';
 
 const read = async (req, res, next) => {
@@ -21,4 +22,9 @@ const create = async (req, res, next) => {
   }
 };
 
-module.exports = { create, read }
+const router = express.Router();
+
+router.get('/', read);
+router.post('/', create);
+
+module.exports = router;
