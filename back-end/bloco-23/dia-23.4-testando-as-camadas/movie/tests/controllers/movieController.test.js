@@ -4,10 +4,6 @@ const { expect } = require('chai');
 const MoviesService = require('../../services/movieService');
 const MoviesController = require('../../controllers/movieController');
 
-// const MoviesController = {
-//   create: () => {}
-// };
-
 describe('Ao chamar o controller de create', () => {
   describe('quando o payload informado não é válido', () => {
     const response = {};
@@ -60,13 +56,6 @@ describe('Ao chamar o controller de create', () => {
         .returns();
     })
 
-    // sinon.stub(MoviesService, 'create')
-    // .resolves(true);
-
-    // after(() => {
-    //   MoviesService.create.restore();
-    // });
-
     it('é chamado o status com o código 201', async () => {
       await MoviesController.create(request, response);
 
@@ -78,6 +67,34 @@ describe('Ao chamar o controller de create', () => {
 
       expect(response.send.calledWith('Filme criado com sucesso!')).to.be.equal(true);
     });
+
+  });
+});
+
+describe('Ao chamar o controler list', async() => {
+  let request ={}, response ={}, next ={};
+  describe('Quando não existem filmes cadastrados na base', () => {
+
+    before(() => {
+      response.status = sinon.stub().returns(response);
+      response.json = sinon.stub().returns();
+    });
+
+    it('res.status() é chamado com status 200', async () => {
+      await MoviesController.list(request,response, next)
+      
+      expect(response.status.calledWith(200)).to.be.equal(true)
+    });
+    it('res.json() retorna um array', () => {
+      await MoviesController.list(request,response, next)
+      
+      expect(response.json.calledWith(sinon.match.array)).to.be.equal(true)
+    });
+  });
+  describe('Quando existem filmes cadastrados na base', () => {
+
+  });
+  describe('Quando ocorre um erro no serviço', () => {
 
   });
 });

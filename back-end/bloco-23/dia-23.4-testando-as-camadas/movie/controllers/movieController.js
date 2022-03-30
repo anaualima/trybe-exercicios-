@@ -17,6 +17,9 @@ const create = async (req, res) => {
     .send('Filme criado com sucesso!');
 };
 
+const list = (req, res, next) => {};
+
 module.exports = {
   create,
+  list
 };
