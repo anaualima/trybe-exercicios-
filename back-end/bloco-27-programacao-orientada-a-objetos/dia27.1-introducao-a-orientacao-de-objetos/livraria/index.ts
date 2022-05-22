@@ -25,7 +25,7 @@ export default class Book {
 
   set salePrice(price: number) {
     if (price < this._cost) {
-      console.error('Não posso fazer isso');
+      console.error('O preço não pode ser menor que o custo');
     } else {
       this._salePrice = price;
     }
