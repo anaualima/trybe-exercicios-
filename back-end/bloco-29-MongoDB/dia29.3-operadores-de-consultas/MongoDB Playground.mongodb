@@ -1,0 +1,42 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'cinema';
+const collection = 'movies';
+
+// Create a new database.
+use(database);
+
+// Create a new collection.
+// db.createCollection(collection);
+
+//🚀 Agora retorne os filmes que contenham action e sci-fi no array category e possuem nota do IMDB maior do que 7.
+// db.movies.find({
+//   category: {
+//     $all: [ "action", "sci-fi" ]
+//   }, 
+//   imdbRating: {
+//     $gt: 7
+//   }
+// })
+
+// Retorne todos os filmes com ratings entre 100 e 105, exibindo apenas os campos title e ratings.
+
+// db.movies.find({
+//   ratings: {
+//     $elemMatch: { $gt: 100, $lt: 105 } 
+//   },
+// },
+// {
+//     _id: 0,
+//     title: 1,
+//     ratings: 1
+//   }
+// ).pretty()
+
+//  Retorne somente o título de todos os filmes com quatro elementos no array ratings.
+
+// db.movies.find(
+//   { ratings: { $size: 4 } },
+//   { _id: 0, title: 1 }
+// ).pretty();
